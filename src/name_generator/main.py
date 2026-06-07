@@ -10,7 +10,13 @@ def is_hiragana(text: str) -> bool:
     return regex.fullmatch(r"\p{Hiragana}+", text) is not None
 
 
-def main(*, word_length=6):
+def main():
+    if len(sys.argv) == 1:
+        word_length = 6
+
+    else:
+        word_length = int(sys.argv[1])
+
     kakasi = pykakasi.kakasi()
 
     word_set = set()
@@ -32,8 +38,4 @@ def main(*, word_length=6):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 1:
-        main()
-
-    else:
-        main(word_length=int(sys.argv[1]))
+    main()

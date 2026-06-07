@@ -1,6 +1,6 @@
 *
-!**/
+!*/
 !.gitignore
 !/pyproject.toml
 !/uv.lock
-!/main.py
+!/src/**/*.py
