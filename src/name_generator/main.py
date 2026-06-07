@@ -32,7 +32,7 @@ def main():
 
         word_set.add(word)
 
-    print(f"{len(word_set)} words found", file=sys.stderr)
+    print(f"found {len(word_set)} words with length {word_length}", file=sys.stderr)
 
     print(random.choice(sorted(word_set)))
 
